@@ -18,7 +18,7 @@ pipeline {
         agent {
             docker { image 'sonarsource/sonar-scanner-cli:latest' } }
             steps {
-                sh 'echo scanning!'
+                sh 'sonar-scanner'
             }
         }
         stage('docker build') {
