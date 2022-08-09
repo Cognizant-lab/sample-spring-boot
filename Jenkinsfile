@@ -2,8 +2,7 @@ pipeline {
     agent none
         environment {
         ENV_DOCKER = credentials('dockerhub')
-        SONAR_TOKEN = credentials('sonar')
-        DOCKERIMAGE = "dummy/dummy"
+        DOCKERIMAGE = "anandmagar1990/lab-practice"
         EKS_CLUSTER_NAME = "demo-cluster"
     }
     stages {
@@ -36,6 +35,6 @@ pipeline {
             steps {
                 sh 'echo deploy to kubernetes'               
             }
-        }
     }
+}
 }
